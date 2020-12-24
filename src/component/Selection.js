@@ -33,18 +33,18 @@ const Selection = () => {
           <p></p>
           <div>
             <button
-              className="btn btn-lg btn-primary welcome-button"
+              className="btn btn-lg welcome-button"
               onClick={handleAI}
-              style={{ borderRadius: "50px" }}
+              style={{ borderRadius: "50px",background:'#007bff',color:'white' }}
             >
              With AI
             </button>
           </div>
           <div>
             <button
-              className="btn btn-lg btn-danger welcome-button mt-4"
+              className="btn btn-lg welcome-button mt-4"
               onClick={handleFriend}
-              style={{ borderRadius: "50px" }}
+              style={{ borderRadius: "50px" , background:'#dc3545' ,color:'white'}}
             >
               With Friend
             </button>

@@ -72,7 +72,6 @@ li {
   margin: 0.5rem 1rem;
 }
 
-
 @media only screen and (max-width: 640px) {
   .board {
     background: white;
