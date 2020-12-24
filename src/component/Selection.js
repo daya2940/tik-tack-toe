@@ -8,9 +8,11 @@ const Selection = () => {
   const [show, setShow] = useState(true);
   const handleFriend = (e) => {
     let val = window.prompt("enter the name of friend");
-    setFriend(val);
-    setAI("");
-    setShow(false);
+    if (val) {
+      setFriend(val);
+      setAI("Alex");
+      setShow(false);
+    }
   };
   const handleAI = (e) => {
     setAI(e.target.textContent);
@@ -22,16 +24,19 @@ const Selection = () => {
     <div>
       {show && (
         <div>
-            <p>Choose Your play mode</p>
+          <p>Choose Your play mode</p>
           <div className="welcome-square">
-            <Square value="X" />
-            <Square value="O" />
+            <p>
+              <span className="X">X</span>
+              <span className="O ml-5">O</span>
+            </p>
           </div>
           <p></p>
           <div>
             <button
               className="btn btn-lg btn-primary welcome-button"
               onClick={handleAI}
+              style={{ borderRadius: "50px" }}
             >
               AI
             </button>
@@ -40,13 +45,16 @@ const Selection = () => {
             <button
               className="btn btn-lg btn-danger welcome-button mt-4"
               onClick={handleFriend}
+              style={{ borderRadius: "50px" }}
             >
               Friend
             </button>
           </div>
         </div>
       )}
-      <div>{!show && <Welcome AI={AI} friend={friend} />}</div>
+      <div>
+        {!show  && <Welcome AI={AI} friend={friend} />}
+      </div>
     </div>
   );
 };
