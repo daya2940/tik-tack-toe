@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Square from "./Square";
 import Welcome from "./welcome";
 
 const Selection = () => {
@@ -24,9 +23,9 @@ const Selection = () => {
     <div>
       {show && (
         <div>
-          <p>Choose Your play mode</p>
-          <div className="welcome-square">
-            <p>
+          <p style={{display:'flex',justifyContent:'center'}}>Choose Your play mode</p>
+          <div>
+            <p style={{display:'flex',justifyContent:'center'}}>
               <span className="X">X</span>
               <span className="O ml-5">O</span>
             </p>
@@ -38,7 +37,7 @@ const Selection = () => {
               onClick={handleAI}
               style={{ borderRadius: "50px" }}
             >
-              AI
+             With AI
             </button>
           </div>
           <div>
@@ -47,7 +46,7 @@ const Selection = () => {
               onClick={handleFriend}
               style={{ borderRadius: "50px" }}
             >
-              Friend
+              With Friend
             </button>
           </div>
         </div>

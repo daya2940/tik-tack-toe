@@ -31,12 +31,10 @@ h1 {
 }
 
 .squares {
-  /* background: #272727; */
   box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
     -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
   border: none;
   font-size: 5rem;
-  /* font-weight: 800; */
   cursor: pointer;
   outline: none;
 }
@@ -95,5 +93,11 @@ li {
     color: orange;
     font-size: 30px;
     font-weight: 1000;
+  }
+
+  .welcome-text {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
   }
 }

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import Square from "./Square";
 import Game from "./Game";
 
 const Welcome = ({ AI, friend }) => {
   const [player, setPlayer] = useState("");
   const [game, showgame] = useState(false);
 
-  const handleselection = (e) => {
+  const handleSelection = (e) => {
     setPlayer(e.target.textContent);
     showgame(true);
   };
@@ -15,18 +14,14 @@ const Welcome = ({ AI, friend }) => {
     <div>
       {!game && (
         <div>
-          <h1 style={{ color: "black" }}>Pick Your side</h1>
+          <h1 style={{ color: "black" }} className="welcome-text">Pick Your side</h1>
           <div className="welcome-square">
-            <Square
-              value="X"
-              onClick={handleselection}
-              style={{ background: "none" }}
-            />
-            <Square
-              value="O"
-              onClick={handleselection}
-              style={{ background: "none" }}
-            />
+          <div>
+            <p style={{display:'flex',justifyContent:'center',cursor:'pointer'}}>
+              <span className="X" onClick={handleSelection}>X</span>
+              <span className="O ml-5" onClick={handleSelection}>O</span>
+            </p>
+          </div>
           </div>
         </div>
       )}
